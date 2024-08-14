@@ -1,0 +1,41 @@
+.containerImg {
+  display: flex;
+gap: 16px;
+outline: 2px solid blue;
+}
+
+.rating {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.camperImg {
+  display: flex;
+  justify-content: end;
+  
+  width: 290px;
+  height: 310px;
+object-fit: contain;
+/* margin-right: 24px; */
+}
+
+.imgCar {
+  display: flex;
+  width: 290px;
+  height: 310px;
+  /* min-width: 290px;
+min-height: 310px; */
+  border-radius: 10px;
+    object-fit: cover;
+}
+
+.imgCar3 {
+  display: flex;
+  width: 290px;
+  height: 310px;
+  /* min-width: 290px;
+min-height: 310px; */
+  border-radius: 10px;
+    object-fit: cover;
+}
