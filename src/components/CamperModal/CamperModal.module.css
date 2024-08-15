@@ -1,3 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+/* padding: 40px;
+width: 982px;
+height: 720px; */
+}
+
+
 .containerImg {
   display: flex;
 gap: 16px;
@@ -38,4 +48,8 @@ min-height: 310px; */
 min-height: 310px; */
   border-radius: 10px;
     object-fit: cover;
+}
+
+.icon {
+  stroke: black;
 }

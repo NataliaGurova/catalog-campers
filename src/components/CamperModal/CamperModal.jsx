@@ -1,6 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
-import css from "./CamperModal.module.css"
 
+import css from "./CamperModal.module.css"
+import FeaturesReviews from "../FeaturesReviews/FeaturesReiews";
+import Form from "../Form/Form";
+// import Icon from "../Icon/Icon";
+// import sprite from "../../assets/iconSprite.svg";
 
 const CamperModal = ({ camper }) => {
     const formatPrice = (price) => {
@@ -8,17 +11,24 @@ const CamperModal = ({ camper }) => {
 }
 
   return (
-    <div>
+    <div className={css.container}>
     
-    <h3>{camper.name}</h3>
+      <h3>{camper.name}</h3>
+
+      
       <div>
           <div className={css.rating}>
-            <p>
+          <p>
               {/* <FaStar color="gold" /> */}
               {camper.rating} ({camper.reviews.length} Reviews)</p>
-            <p>
+          <a href="">
+            <svg width={16} height={16} className={css.icon}>
+              <use href="../../assets/iconSprite.svg#icon-map" ></use>
+            </svg>
+
               {/* <FaStar color="gold" /> */}
-              {camper.location}</p>
+            {camper.location}
+          </a>
           </div>
       </div>
       <h3>{formatPrice(camper.price)}</h3>
@@ -36,23 +46,13 @@ const CamperModal = ({ camper }) => {
       <div className={css.camperImg}>
         <img src={`${camper.gallery[2]}`} alt={camper.name}
           className={css.imgCar3}
-          minWidth={290}
-          minHeight={310}
         />        
       </div>
 
       </div>
       <p className={css.description}>{camper.description}</p>
-
-            <ul>
-        <li>
-          <Link to="features">Features</Link>
-        </li>
-        <li>
-          <Link to="reviews">Reviews</Link>
-        </li>
-      </ul>
-      <Outlet />
+      <FeaturesReviews camper={camper} />
+      <Form />
       </div>
   );
 };

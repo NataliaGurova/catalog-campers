@@ -2,6 +2,7 @@ import { useState } from "react";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import css from "./CamperItem.module.css"
 import CamperModal from "../CamperModal/CamperModal";
+import Icon from "../Icon/Icon";
 
 const CamperItem = ({ camper }) => {
 
@@ -35,9 +36,15 @@ const CamperItem = ({ camper }) => {
             <p>
               {/* <FaStar color="gold" /> */}
               {camper.rating} ({camper.reviews.length} Reviews)</p>
-            <p>
+            <p className="">
+              {/* <svg width={16} height={16} className={css.icon}>
+                <use href="../../assets/icons.svg#icon-phone" ></use>
+              </svg> */}
+              <Icon id="map" width="16" height="16" fillColor="white" className={css.icon}/>
+
               {/* <FaStar color="gold" /> */}
-              {camper.location}</p>
+              {camper.location}
+            </p>
           </div>
         </div>
         <p className={css.description}>{camper.description}</p>
@@ -45,12 +52,18 @@ const CamperItem = ({ camper }) => {
         <button 
         onClick={handleOpenModal}
         >Show more</button>
-        {/* {showModal && <ModalWindow camper={camper} onClose={closeModal} />} */}
- {showModal && (
+
+        {showModal && (
+  <ModalWindow onCloseModal={handleCloseModal} modalIsOpen={showModal}>
+    <CamperModal camper={camper} />
+  </ModalWindow>
+)}
+      
+  {/* {showModal && (
         <ModalWindow onCloseModal={handleCloseModal} modalIsOpen={handleOpenModal}>
             <CamperModal camper={camper} />
         </ModalWindow>
-      )}
+      )} */}
       </div>
     </div>
   )

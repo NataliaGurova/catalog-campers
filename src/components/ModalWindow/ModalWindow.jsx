@@ -25,6 +25,12 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
         overlay: {
           backgroundColor: 'rgba(47, 47, 47, 0.6)',
         },
+        content: {
+          borderRadius: '20px',
+          padding: '40px',
+          width: '982px',
+          margin: 'auto', // Center the modal
+        },
       }}
     >
       <div className={style.modalContainer}>
