@@ -1,0 +1,35 @@
+
+.iconF {
+  stroke: black;
+  fill: transparent;
+  margin-right: 8px;
+}
+.icon {
+  margin-right: 8px;
+  stroke: black;
+  fill: black;
+  
+}
+
+.iconS {
+  margin-right: 8px;
+  fill: black;
+}
+
+.iconList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 430px;
+  margin-top: 44px;
+
+}
+
+.iconItem {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+border-radius: 100px;
+padding: 12px 18px;
+background: #f2f4f7;
+}

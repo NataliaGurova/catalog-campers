@@ -76,3 +76,58 @@ json
 В репозиторії має бути описаний README.md.
 
 Проєкт задеплоєний на github pages або netlify.com.
+
+
+.icon {
+  stroke: black;
+  fill: transparent;
+  
+}
+
+"details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 2,
+      "TV": 0,
+      "CD": 0,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 3,
+      "microwave": 1,
+      "gas": "22kg",
+      "water": "76l"
+      }
+
+      "_id": "1",
+    "name": "Road Bear C 23-25",
+    "price": 10000,
+    "rating": 4.5,
+    "location": "Ukraine, Kyiv",
+    "adults": 3,
+    "children": 2,
+    "engine": "petrol",
+    "transmission": "automatic",
+    "form": "alcove",
+    "length": "7.3m",
+    "width": "2.65m",
+    "height": "3.65m",
+    "tank": "208l",
+    "consumption": "30l/100km",
+
+    {/* {Object.entries(camper.details).map(([feature, value]) => (
+              <li key={feature}>
+                {feature}: {typeof value === "number" ? (value ? "Yes" : "No") : value}
+              </li>
+            ))} */}
+
+                  {/* <div className={css.tabContent}>
+        {activeTab === "features" && (
+          <ul>
+            {camper.details.map((detail, index) => (
+              <li key={index}>{detail}</li>
+            ))}
+          </ul>
+        )} */}

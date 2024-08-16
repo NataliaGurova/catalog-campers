@@ -1,42 +1,37 @@
-// import { NavLink } from "react-router-dom";
-import campers from "../../campers.json"
+
+// import campers from "../../campers.json"
+import { useSelector } from "react-redux";
 import CamperItem from "../CamperItem/CamperItem";
-
-const CampersList = ({campers}) => {
- 
-  return (    
-    <ul >
-   
-      {campers.map((camper) => (
-        <li key={camper._id}>
-          {/* <NavLink to={`/catalog/${camper._id}`} state={location}> */}
+import { selectAdverts } from "../../redux/selectors";
+import { useState } from "react";
+import css from "./CampersList.module.css"
 
 
+const CampersList = () => {
+  const data = useSelector(selectAdverts);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 4);
+  };
+
+  return (
+    <div className={css.container}>
+      <ul>
+        {data.slice(0, visibleCount).map((camper) => (
+          <li key={camper._id}>
             <CamperItem camper={camper} />
-{/* 
-            <div>
-                  <div>
-                    <img
-                      src={`${camper.gallery[0]}`}
-                      alt={camper.name}
-                      // width={300}
-                      // height={120}
-                    />
-                  </div>
-                  <div className={css.listText}>
-                    <b className={css.title}>
-                      {movie.title} ({movie.release_date.slice(0, 4)})
-                    </b>
-                    <p className={css.rating}>
-                      User Score: {Math.round(movie.vote_average * 10)}%
-                    </p>
-                  </div>
-                </div> */}
-          {/* </NavLink> */}
-        </li>
-      ))}
-    </ul>
-  ); 
-}
+          </li>
+        ))}
+      </ul>
+
+      {visibleCount < data.length && (
+        <button onClick={handleLoadMore} className={css.btnLoadMore}>
+          Load More
+        </button>
+      )}
+    </div>
+  );
+};
 
 export default CampersList;

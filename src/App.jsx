@@ -6,10 +6,21 @@ import SharedLayout from "./components/SharedLayout/SharedLayout";
 import CampersCatalogPage from "./page/CampersCatalogPage/CampersCatalogPage";
 import FavoritesPage from "./page/FavoritesPage/FavoritesPage";
 import Navigation from "./components/Navigation/Navigation";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchAdverts } from "./redux/operations";
 
 
 
 const App = () => {
+
+const dispatch = useDispatch();
+
+useEffect(() => {
+    dispatch(fetchAdverts());
+  }, [dispatch]);
+
+
   return (
     <div>
     <Navigation />
@@ -17,10 +28,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CampersCatalogPage />} />
-            {/* <Route path='/catalog/:camperId' element={<CamperModal />} >
-				      <Route path='features' element={<Features />} />
-              <Route path='reviews' element={<Reviews />} />
-            </Route> */}
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

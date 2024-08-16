@@ -1,0 +1,66 @@
+
+.container {
+border: 1px solid rgba(16, 24, 40, 0.2);
+border-radius: 10px;
+padding: 24px;
+width: 448px;
+height: 532px;
+}
+
+
+.icon {
+   stroke: black;
+  fill: transparent;
+  /* position: absolute; */
+    /* top: 40px;
+    right: 17px;
+    cursor: pointer; */
+}
+
+
+.field {
+  border-radius: 10px;
+padding: 18px 341px 18px 18px;
+width: 400px;
+height: 56px;
+background: #f7f7f7;
+margin-bottom: 14px;
+}
+
+.bookingDateContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+padding: 18px 341px 18px 18px;
+width: 400px;
+height: 56px;
+background: #f7f7f7;
+margin-bottom: 14px;
+}
+
+.bookingDateInput {
+  width: 100%;
+  padding-right: 40px; /* Зробіть місце для іконки */
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 18px; /* Іконка зміщена на 10px від правого краю поля */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

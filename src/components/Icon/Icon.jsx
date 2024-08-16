@@ -14,15 +14,5 @@ const Icon = ({ id, width, height, className = '', fillColor }) => {
     </svg>
   );
 };
-// import sprite from "../../assets/sprite.svg";
 
-
-// const Icon = ({ width, height, id, styles }) => {
-//   return (
-//     <svg width={width} height={height} className={styles}>
-//       <use href={`/symbolSprite.svg#icon-${id}`} ></use>
-//     </svg>
-    
-//   );
-// };
 export default Icon;

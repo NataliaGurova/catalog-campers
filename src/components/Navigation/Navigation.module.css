@@ -38,5 +38,6 @@ gap: 20px;
 
 .active {
   color: white;
-  background-color: rgb(255, 144, 60);
+  /* background-color: rgb(255, 144, 60); */
+  background-color: rgb(60, 170, 255);
 }

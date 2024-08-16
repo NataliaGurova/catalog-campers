@@ -1,9 +1,12 @@
 
 import css from "./CamperModal.module.css"
 import FeaturesReviews from "../FeaturesReviews/FeaturesReiews";
-import Form from "../Form/Form";
-// import Icon from "../Icon/Icon";
-// import sprite from "../../assets/iconSprite.svg";
+import Form from "../BookingForm/BookingForm";
+import { FaStar } from "react-icons/fa";
+import Icon from "../Icon/Icon";
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
 
 const CamperModal = ({ camper }) => {
     const formatPrice = (price) => {
@@ -11,6 +14,7 @@ const CamperModal = ({ camper }) => {
 }
 
   return (
+<PerfectScrollbar className={css.scrollContainer}>
     <div className={css.container}>
     
       <h3>{camper.name}</h3>
@@ -19,16 +23,12 @@ const CamperModal = ({ camper }) => {
       <div>
           <div className={css.rating}>
           <p>
-              {/* <FaStar color="gold" /> */}
+              <FaStar color="gold" />
               {camper.rating} ({camper.reviews.length} Reviews)</p>
-          <a href="">
-            <svg width={16} height={16} className={css.icon}>
-              <use href="../../assets/iconSprite.svg#icon-map" ></use>
-            </svg>
-
-              {/* <FaStar color="gold" /> */}
+          <p >
+              <Icon id="map" width="16" height="16" className={css.icon}/>
             {camper.location}
-          </a>
+          </p>
           </div>
       </div>
       <h3>{formatPrice(camper.price)}</h3>
@@ -51,9 +51,12 @@ const CamperModal = ({ camper }) => {
 
       </div>
       <p className={css.description}>{camper.description}</p>
-      <FeaturesReviews camper={camper} />
-      <Form />
+      <div className={css.addContainer}>
+        <FeaturesReviews camper={camper} />
+        <Form />
+        </div>
       </div>
+        </PerfectScrollbar>
   );
 };
 
