@@ -4,10 +4,17 @@ import css from "./CamperItem.module.css"
 import CamperModal from "../CamperModal/CamperModal";
 import Icon from "../Icon/Icon";
 import { FaStar } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite, removeFavorite } from "../../redux/advertsSlice";
+// import { selectFavorite } from "../../redux/selectors";
+// import { addFavorite, removeFavorite } from "../../redux/favoritesSlice";
 
 
 const CamperItem = ({ camper }) => {
+  const dispatch = useDispatch();
 
+  const isFavorite = useSelector((state) =>
+    state.adverts.item.find((fav) => fav._id === camper._id))
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
@@ -15,7 +22,17 @@ const CamperItem = ({ camper }) => {
 
   const formatPrice = (price) => {
   return `€${price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, '')}`;
-}
+  }
+  
+
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite(camper._id));
+    } else {
+      dispatch(addFavorite(camper));
+    }
+  };
+
   return (
     <div className={css.container}>
       <div className={css.camperImg}>
@@ -28,12 +45,14 @@ const CamperItem = ({ camper }) => {
           <h2 className={css.name}>{camper.name}</h2>
           <div className={css.price}>
           <h2>{formatPrice(camper.price)}</h2>
-            <button className={css.btnHeart}>
+            <button
+              className={`${css.btnHeart} ${isFavorite ? css.favorite : ""}`}
+              onClick={toggleFavorite}
+            >
               <span>
-                <Icon id="heart" width="24" height="24" className={css.iconHeart}/>
+                <Icon id="heart" width="24" height="24" className={css.iconHeart} />
               </span>
-          
-          </button>
+            </button>
           </div>
         </div>
         <div>
@@ -49,7 +68,7 @@ const CamperItem = ({ camper }) => {
         </div>
         <p className={css.description}>{camper.description}</p>
         <div>
-       <ul className={css.iconList}>
+      <ul className={css.iconList}>
             {camper.adults !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="adults" width="20" height="20" className={css.iconS}/>

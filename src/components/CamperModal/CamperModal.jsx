@@ -1,7 +1,7 @@
 
 import css from "./CamperModal.module.css"
 import FeaturesReviews from "../FeaturesReviews/FeaturesReiews";
-import Form from "../BookingForm/BookingForm";
+import BookingForm from "../BookingForm/BookingForm";
 import { FaStar } from "react-icons/fa";
 import Icon from "../Icon/Icon";
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -53,7 +53,7 @@ const CamperModal = ({ camper }) => {
       <p className={css.description}>{camper.description}</p>
       <div className={css.addContainer}>
         <FeaturesReviews camper={camper} />
-        <Form />
+        <BookingForm />
         </div>
       </div>
         </PerfectScrollbar>

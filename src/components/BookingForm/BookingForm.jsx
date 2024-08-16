@@ -68,7 +68,7 @@ const BookingForm = () => {
   return (
     <div className={css.container}>
       <h3>Book your campervan now</h3>
-      <p>Stay connected! We are always ready to help you.</p>
+      <p className={css.text}>Stay connected! We are always ready to help you.</p>
       <form onSubmit={handleSubmit} className={css.formContainer}>
         <div className={css.field}>
           <input

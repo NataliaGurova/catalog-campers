@@ -5,9 +5,23 @@ const advertsSlice = createSlice({
   name: "adverts",
   initialState: {
     data: [],
+    item: [],
     loading: false,
     error: null,
   },
+
+
+  reducers: {
+    addFavorite: (state, action) => {
+      state.item.push(action.payload);
+      
+    },
+    removeFavorite: (state, action) => {
+      state.item = state.item.filter(el => el._id !== action.payload);
+      
+    },
+  },
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchAdverts.pending, (state) => {
@@ -24,4 +38,10 @@ const advertsSlice = createSlice({
       });
   }
 });
+
+export const {
+  addFavorite,
+  removeFavorite,
+} = advertsSlice.actions;
+
 export const advertsReducer = advertsSlice.reducer;

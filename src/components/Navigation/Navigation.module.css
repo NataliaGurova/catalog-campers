@@ -30,7 +30,8 @@ gap: 20px;
 
 .link {
   padding: 8px 16px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 200px;
   text-decoration: none;
   color: black;
   font-weight: 500;
