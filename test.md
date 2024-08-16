@@ -131,3 +131,33 @@ json
             ))}
           </ul>
         )} */}
+
+
+        <div className={css.detailsContainer}>
+      <ul className={css.detailsList}>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Form</span>
+          <span className={css.detailValue}>{camper.details.form}</span>
+        </li>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Length</span>
+          <span className={css.detailValue}>{camper.details.length}</span>
+        </li>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Width</span>
+          <span className={css.detailValue}>{camper.details.width}</span>
+        </li>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Height</span>
+          <span className={css.detailValue}>{camper.details.height}</span>
+        </li>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Tank Capacity</span>
+          <span className={css.detailValue}>{camper.details.tank}</span>
+        </li>
+        <li className={css.detailsItem}>
+          <span className={css.detailTitle}>Consumption</span>
+          <span className={css.detailValue}>{camper.details.consumption}</span>
+        </li>
+      </ul>
+    </div>
