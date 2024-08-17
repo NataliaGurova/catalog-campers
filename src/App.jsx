@@ -35,7 +35,7 @@ useEffect(() => {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CampersCatalogPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </SharedLayout>
     </div>
