@@ -8,22 +8,23 @@ const buildLinkClass = ({ isActive }) => {
 
 const Navigation = ({ isHomePage }) => {
   return (
-    <header className={css.header}>
-      <div className={css.container}>
-      <nav className={css.nav}>
-        <NavLink to="/" className={buildLinkClass}>
-          Home
-        </NavLink>
-        <NavLink to="/catalog" className={buildLinkClass}>
-          Catalog Campers
-        </NavLink>
-        <NavLink to="/favorites" className={buildLinkClass}>
-          Favorites Campers
-        </NavLink>
-      </nav>
+    <header className={clsx(css.header, isHomePage && css.headerHome)}>
+      <div className={clsx(css.container, isHomePage && css.containerHome)}>
+        <nav className={css.nav}>
+          <NavLink to="/" className={buildLinkClass}>
+            Home
+          </NavLink>
+          <NavLink to="/catalog" className={buildLinkClass}>
+            Catalog Campers
+          </NavLink>
+          <NavLink to="/favorites" className={buildLinkClass}>
+            Favorites Campers
+          </NavLink>
+        </nav>
       </div>
     </header>
   );
 };
+
 
 export default Navigation;
