@@ -161,3 +161,34 @@ json
         </li>
       </ul>
     </div>
+
+
+    export function capitalizeFirstLetter(string) {
+  if (!string) return '';
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+export function formatString(str) {
+  const spacedStr = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+
+  return spacedStr.charAt(0).toUpperCase() + spacedStr.slice(1);
+}
+
+
+const Navigation = ({ isHomePage }) => {
+  return (
+    <header className={clsx(s.header, isHomePage && s.isHomePage)}>
+      <nav className={s.nav}>
+        <NavLink to="/" className={buildLinkClass}>
+          Home
+        </NavLink>
+        <NavLink to="/catalog" className={buildLinkClass}>
+          Catalog
+        </NavLink>
+        <NavLink to="/favorites" className={buildLinkClass}>
+          Favorite
+        </NavLink>
+      </nav>
+    </header>
+  );
+};

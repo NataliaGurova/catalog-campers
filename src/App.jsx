@@ -1,24 +1,22 @@
 
-import { Route, Routes } from "react-router-dom";
-// import HomePage from "./page/HomePage/HomePage";
-
+import { Route, Routes, useLocation } from "react-router-dom";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
-// import CampersCatalogPage from "./page/CampersCatalogPage/CampersCatalogPage";
-// import FavoritesPage from "./page/FavoritesPage/FavoritesPage";
 import Navigation from "./components/Navigation/Navigation";
 import { useDispatch } from "react-redux";
 import { lazy, useEffect } from "react";
 import { fetchAdverts } from "./redux/operations";
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+// const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 const CampersCatalogPage = lazy(() => import('./pages/CampersCatalogPage/CampersCatalogPage'));
 const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
-// const Navigation = lazy(() => import("./components/Navigation/Navigation"));
 
 
 
 const App = () => {
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
 const dispatch = useDispatch();
 
@@ -29,7 +27,7 @@ useEffect(() => {
 
   return (
     <div>
-    <Navigation />
+    <Navigation isHomePage={isHomePage} />
       <SharedLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />

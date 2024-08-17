@@ -6,15 +6,15 @@ import Icon from "../Icon/Icon";
 import { FaStar } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../../redux/advertsSlice";
-// import { selectFavorite } from "../../redux/selectors";
-// import { addFavorite, removeFavorite } from "../../redux/favoritesSlice";
+import { selectFavorite } from "../../redux/selectors";
 
 
 const CamperItem = ({ camper }) => {
   const dispatch = useDispatch();
 
-  const isFavorite = useSelector((state) =>
-    state.adverts.item.find((fav) => fav._id === camper._id))
+  // const isFavorite = useSelector((state) =>
+  //   state.adverts.item.find((fav) => fav._id === camper._id))
+  const isFavorite = useSelector((state) => selectFavorite(state, camper._id));
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);

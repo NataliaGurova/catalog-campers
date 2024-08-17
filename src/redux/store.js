@@ -15,19 +15,16 @@ import {
 import storage from 'redux-persist/lib/storage'
 
 
-
 // Налаштування для redux-persist
 const persistConfig = {
-  key: "favorites", // ключ для зберігання у LocalStorage
-  storage, // тип сховища
+  key: "favorites", 
+  storage, 
   whitelist: ["item"], // список ред'юсерів, які мають бути персистовані
 };
 
-const persistedReducer = persistReducer(persistConfig, advertsReducer);
 export const store = configureStore({
-  reducer: {
-    
-    adverts: persistedReducer,
+  reducer: {    
+    adverts: persistReducer(persistConfig, advertsReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
