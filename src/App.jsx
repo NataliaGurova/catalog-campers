@@ -10,10 +10,10 @@ import { useDispatch } from "react-redux";
 import { lazy, useEffect } from "react";
 import { fetchAdverts } from "./redux/operations";
 
-const HomePage = lazy(() => import('./page/HomePage/HomePage'));
-const NotFoundPage = lazy(() => import('./page/NotFoundPage/NotFoundPage'));
-const CampersCatalogPage = lazy(() => import('./page/CampersCatalogPage/CampersCatalogPage'));
-const FavoritesPage = lazy(() => import('./page/FavoritesPage/FavoritesPage'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+const CampersCatalogPage = lazy(() => import('./pages/CampersCatalogPage/CampersCatalogPage'));
+const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 // const Navigation = lazy(() => import("./components/Navigation/Navigation"));
 
 
