@@ -1,9 +1,8 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
-import css from "./BookingForm.module.css"
+import css from "./BookingForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 import Icon from "../Icon/Icon";
-
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -77,11 +76,11 @@ const BookingForm = () => {
             id="name"
             value={formData.name}
             onChange={handleChange}
-            className={errors.name ? "error" : ""}
+            className={errors.name ? css.error : ""}
             placeholder="Name"
             required
           />
-          {errors.name && <span className="error-message">Name is required</span>}
+          {errors.name && <span className={css.errorMessage}>Name is required</span>}
         </div>
 
         <div className={css.field}>
@@ -91,12 +90,12 @@ const BookingForm = () => {
             id="email"
             value={formData.email}
             onChange={handleChange}
-            className={errors.email ? "error" : ""}
+            className={errors.email ? css.error : ""}
             placeholder="Email"
             required
           />
           {errors.email && (
-            <span className="error-message">Please enter a valid email</span>
+            <span className={css.errorMessage}>Please enter a valid email</span>
           )}
         </div>
 
@@ -106,14 +105,14 @@ const BookingForm = () => {
             onChange={handleDateChange}
             placeholderText="Booking date"
             dateFormat="dd/MM/yyyy"
-            className={`${css.bookingDateInput} ${errors.bookingDate ? "error" : ""}`}
+            className={`${css.bookingDateInput} ${errors.bookingDate ? css.error : ""}`}
             required
           />
           <span className={css.calendarIcon}>
-            <Icon id="calendar" width="20" height="20" className={css.icon}/>
+            <Icon id="calendar" width="20" height="20" className={css.icon} />
           </span>
           {errors.bookingDate && (
-            <span className="error-message">Booking date is required</span>
+            <span className={css.errorMessage}>Booking date is required</span>
           )}
         </div>
 
@@ -127,7 +126,9 @@ const BookingForm = () => {
           />
         </div>
 
-        <button className={css.btnSend} type="submit">Send</button>
+        <button className={css.btnSend} type="submit">
+          Send
+        </button>
       </form>
     </div>
   );

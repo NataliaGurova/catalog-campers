@@ -1,14 +1,14 @@
 import Icon from '../Icon/Icon';
 import css from './Filters.module.css';
 
-import { useId, useState } from 'react';
+import { useState } from 'react';
 
 
 const Filters = () => {
   const [location, setLocation] = useState('');
   const [selectedEquipment, setSelectedEquipment] = useState([]);
   const [selectedType, setSelectedType] = useState('');
-  const localId = useId();
+  
 
   // Handle location input change
   const handleLocationChange = (e) => {
@@ -144,38 +144,3 @@ const Filters = () => {
 };
 
 export default Filters;
-
-// const Filters = ({onChange, location }) => {
-
-
-//   return (
-//     <section className={css.container}>
-//       <input
-//         type="text" 
-//         value={location} 
-//         onChange={onChange} 
-//         placeholder="Enter location" 
-//       />
-//       <p>Filters</p>
-//       <h3>Vehicle equipment</h3>
-//       <div>
-//         <button><Icon id="AC" width="32" height="32" className={css.iconS} />AC</button>
-//         <button><Icon id="automatic" width="32" height="32" className={css.iconF} />Automatic</button>
-//         <button><Icon id="kitchen" width="32" height="32" className={css.iconF} />Kitchen</button>
-//         <button><Icon id="TV" width="32" height="32" className={css.iconF} />TV</button>
-//         <button><Icon id="shower" width="32" height="32" className={css.iconF} />Shower/WC</button>
-      
-//       </div>
-//       <h3>Vehicle type</h3>
-//       <div>
-//         <button><Icon id="camper1" width="32" height="32" className={css.icon} />Van</button>
-//         <button><Icon id="camper2" width="32" height="32" className={css.icon} />Fully Integrated</button>
-//         <button><Icon id="camper3" width="32" height="32" className={css.icon} />Alcove</button>
-
-//       </div>
-      
-//     </section>
-//   )
-// }
-
-// export default Filters;

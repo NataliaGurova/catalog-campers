@@ -1,74 +1,51 @@
-
 .container {
-border: 1px solid rgba(16, 24, 40, 0.2);
-border-radius: 10px;
-padding: 24px;
-width: 448px;
-height: 532px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 24px;
+  width: 448px;
+  height: 532px;
 }
 
 .title {
   font-weight: 600;
-font-size: 20px;
- 
-line-height: 1.2;
-color: #101828;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
 }
+
 .text {
   margin-bottom: 24px;
   margin-top: 8px;
   font-size: 16px;
-  color:#475467;
+  color: #475467;
 }
 
 .icon {
-   stroke: black;
+  stroke: black;
   fill: transparent;
-  /* position: absolute; */
-    /* top: 40px;
-    right: 17px;
-    cursor: pointer; */
 }
-
-/* 
-.field {
-  border-radius: 10px;
-  padding: 18px 341px 18px 18px;
-  width: 400px;
-  height: 56px;
-  background-color: #f7f7f7;
-  outline: none;
-  margin-bottom: 14px;
-} */
-/* 
-.field:placeholder-shown {
-  background-color: transparent;
-
-}
-
-.field:hover::placeholder {
-  border-color: transparent;
-
-} */
 
 .bookingDateContainer {
   z-index: 22;
   position: relative;
   display: flex;
-  /* align-items: center; */
-
   border-radius: 10px;
-padding: 18px 341px 18px 18px;
-width: 400px;
-height: 56px;
-background: #f7f7f7;
-margin-bottom: 14px;
+  padding: 18px 341px 18px 18px;
+  width: 400px;
+  height: 56px;
+  background: #f7f7f7;
+  margin-bottom: 14px;
 }
 
 .bookingDateInput {
   width: 100%;
   text-align: start;
-  padding-right: 40px; /* Зробіть місце для іконки */
+  padding-right: 40px;
+
+  background-color: #f7f7f7;
+  outline: none;
+  width: 350px;
+  border-color: transparent;
 }
 
 .calendarIcon {
@@ -86,62 +63,35 @@ margin-bottom: 14px;
   border: 1px solid red;
 }
 
-.error-message {
+.errorMessage {
   color: red;
   font-size: 12px;
   margin-top: 5px;
 }
 
-
-/* 
-input.name, input.email, input.bookingDate {
-  border: none;
-  border-radius: 10px;
-  background-color: rgba(36, 22, 114, 0.7);
-}
-
-input.name:hover, input.name:focus, input.email:hover, input.email:focus {
-  background-color: white;
-  outline: none;
-} */
-
-
-
 .field input {
   outline: none;
   border-color: transparent;
-text-align: start;
-
- border-radius: 10px;
- padding-left: 18px;
-  
+  text-align: start;
+  border-radius: 10px;
+  padding-left: 18px;
   width: 400px;
   height: 56px;
   background-color: #f7f7f7;
-  outline: none;
   margin-bottom: 14px;
-  
-}
-
-.bookingDateInput {
-background-color: #f7f7f7;
-  outline: none;
-  width: 350px;
-  border-color: transparent;
 }
 
 .field textarea {
   border-radius: 10px;
- padding-left: 18px;
- padding-top: 18px;
- border: none;
+  padding-left: 18px;
+  padding-top: 18px;
+  border: none;
   outline: none;
   width: 400px;
-height: 114px;
+  height: 114px;
   background-color: #f7f7f7;
-  outline: none;
-
 }
+
 .field input:focus,
 .bookingDateInput:focus,
 .field textarea:focus {
@@ -158,18 +108,16 @@ height: 114px;
 }
 
 .btnSend {
-  
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 200px;
-padding: 16px 60px;
-width: 160px;
-height: 56px;
-
-background: #e44848;
-color: #fff;
-margin-top: 24px;
+  padding: 16px 60px;
+  width: 160px;
+  height: 56px;
+  background: #e44848;
+  color: #fff;
+  margin-top: 24px;
 }
 
 .btnSend:hover,
@@ -178,56 +126,8 @@ margin-top: 24px;
 }
 
 
-/* 
 
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.field input,
-.bookingDateInput,
-.field textarea {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  font-size: 16px;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.3s;
-}
 
-.field input:focus,
-.bookingDateInput:focus,
-.field textarea:focus {
-  border-color: #007BFF;
-}
 
-.field input::placeholder,
-.bookingDateInput::placeholder,
-.field textarea::placeholder {
-  color: #aaa;
-}
 
-.field textarea {
-  resize: vertical;
-  min-height: 100px; 
-}
-
-.bookingDateContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.bookingDateInput {
-  flex-grow: 1;
-}
-
-.calendarIcon {
-  position: absolute;
-  right: 10px;
-  pointer-events: none;
-} */

@@ -5,14 +5,13 @@
   margin-right: 20px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .scrollContainer::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
-
 
 .container {
   display: flex;
@@ -20,37 +19,47 @@
   border-radius: 20px;
   padding-right: 16px;
   height: 1288px;
-
   position: relative;
-  /* margin-right: 16px; */
-/* padding: 40px;
-width: 982px;
-height: 720px; */
 }
 
 .btnClose {
   stroke: black;
   fill: black;
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
 }
 
 .name {
   font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 24px;
-margin-bottom: 8px;
-
-line-height: 125%;
-color: #101828;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 125%;
+  color: #101828;
 }
 
 .containerImg {
   display: flex;
-gap: 16px;
-margin-bottom: 24px;
-width: 902px;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 902px;
+}
+
+.camperImg {
+  display: flex;
+  justify-content: end;
+  width: 290px;
+  height: 310px;
+  object-fit: contain;
+}
+
+.imgCar,
+.imgCar3 {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .rating {
@@ -60,25 +69,21 @@ width: 902px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-
   line-height: 150%;
-  /* text-decoration: underline; */
-  
 }
+
 .ratingSpan {
   text-decoration: underline;
 }
 
 .star {
   margin-right: 4px;
-
 }
 
 .map {
   display: inline;
   font-weight: 400;
   font-size: 16px;
-  text-decoration-line: none;
   line-height: 150%;
 }
 
@@ -92,58 +97,23 @@ width: 902px;
   margin-bottom: 24px;
 }
 
-.camperImg {
-  display: flex;
-  justify-content: end;
-  
-  width: 290px;
-  height: 310px;
-object-fit: contain;
-/* margin-right: 24px; */
-}
-
-.imgCar {
-  display: flex;
-  width: 290px;
-  height: 310px;
-  border-radius: 10px;
-    object-fit: cover;
-}
-
-.imgCar3 {
-  display: flex;
-  width: 290px;
-  height: 310px;
-  border-radius: 10px;
-    object-fit: cover;
-}
-
 .icon {
   stroke: black;
   fill: transparent;
-  
 }
-
 
 .addContainer {
   display: flex;
   width: 902px;
   justify-content: space-between;
-  /* width: 902px;
-height: 624px;
-padding-right: 40px; */
 }
 
-
 .description {
-  display: inline-block;      
-  margin-bottom: 44px; 
+  display: inline-block;
+  margin-bottom: 44px;
   font-weight: 400;
-font-size: 16px;
- 
-line-height: 1.5;
-color: #475467; 
-  /* margin-top: 20px;
-  font-size: 14px; */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
 }
 

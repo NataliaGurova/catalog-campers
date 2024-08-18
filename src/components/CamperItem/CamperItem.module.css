@@ -1,40 +1,33 @@
 .container {
   display: flex;
-  outline: 2px solid greenyellow;
   border: 1px solid rgba(16, 24, 40, 0.2);
-border-radius: 20px;
-padding: 24px;
-width: 888px;
-height: 358px;
-margin-bottom: 32px;
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  margin-bottom: 32px;
 }
 
 .name {
-  white-space: nowrap;    /* Забороняє переносити текст на новий рядок */
-  overflow: hidden;       /* Приховує частини тексту, що виходять за межі контейнера */
+  white-space: nowrap;
+  overflow: hidden;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
-
   line-height: 125%;
   color: #101828;
 }
+
 .camperImg {
-  display: flex;
-  justify-content: end;
-  
   width: 290px;
   height: 310px;
-  object-fit: contain;
   margin-right: 24px;
 }
 
 .imgCar {
-  display: flex;
   height: 310px;
   border-radius: 10px;
-  /* width: 290px; */
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .title {
@@ -46,11 +39,11 @@ margin-bottom: 32px;
 .priceCont {
   display: flex;
 }
+
 .price {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 24px;
-
   line-height: 125%;
 }
 
@@ -61,25 +54,21 @@ margin-bottom: 32px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
-
   line-height: 150%;
-  /* text-decoration: underline; */
-  
 }
+
 .ratingSpan {
   text-decoration: underline;
 }
 
 .star {
   margin-right: 4px;
-
 }
 
 .map {
   display: inline;
   font-weight: 400;
   font-size: 16px;
-  text-decoration-line: none;
   line-height: 150%;
 }
 
@@ -88,54 +77,18 @@ margin-bottom: 32px;
   fill: transparent;
   margin-right: 4px;
 }
+
 .description {
   max-width: 525px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 24px;
-
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #475467;
-}
-
-.icon {
-  stroke: black;
-  fill: transparent;
-  
-}
-
-.btnShowMore {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 200px;
-padding: 16px 40px;
-width: 166px;
-height: 56px;
-
-background: #e44848;
-color: #fff;
-}
-
-.btnShowMore:hover,
-.btnShowMore:focus {
-  background: #d84343;
-}
-
-.iconHeart:hover {
-  stroke: #d84343;
-}
-
-.btnHeart.favorite {
-  color: #d84343;
-}
-.btnHeart.favorite .iconHeart {
-  fill: #d84343;
-  stroke: #d84343;
 }
 
 .iconHeart {
@@ -144,16 +97,10 @@ color: #fff;
   margin-left: 10px;
 }
 
-
 .iconF {
   stroke: black;
   fill: transparent;
   margin-right: 8px;
-}
-.icon {
-  margin-right: 8px;
-  stroke: black;
-  fill: black;  
 }
 
 .iconS {
@@ -167,14 +114,34 @@ color: #fff;
   gap: 8px;
   width: 430px;
   margin-bottom: 24px;
-
 }
 
 .iconItem {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-border-radius: 100px;
-padding: 12px 18px;
-background: #f2f4f7;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background: #f2f4f7;
+}
+
+.btnShowMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  background: #e44848;
+  color: #fff;
+}
+
+.btnShowMore:hover,
+.btnShowMore:focus {
+  background: #d84343;
+}
+
+.btnHeart.favorite .iconHeart {
+  fill: #d84343;
+  stroke: #d84343;
 }

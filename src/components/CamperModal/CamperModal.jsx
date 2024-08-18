@@ -50,7 +50,6 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
           <p className={css.description}>{camper.description}</p>
           <div className={css.addContainer}>
             <FeaturesReviews camper={camper} />
-            {/* <BookingForm /> */}
           </div>
         </section>
       </PerfectScrollbar>

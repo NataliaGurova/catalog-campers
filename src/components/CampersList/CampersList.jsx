@@ -1,5 +1,4 @@
 
-// import campers from "../../campers.json"
 import { useSelector } from "react-redux";
 import CamperItem from "../CamperItem/CamperItem";
 import { selectAdverts } from "../../redux/selectors";
