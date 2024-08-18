@@ -2,12 +2,12 @@
 import { useState } from "react";
 import css from "./FeaturesReviews.module.css"
 import Icon from "../Icon/Icon.jsx";
-import Features from "../Features/Features";
 import BookingForm from "../BookingForm/BookingForm";
 import Reviews from "../Reviews/Reviews";
+import Features from "../Features/Features.jsx";
 
 const FeaturesReviews = ({ camper }) => {
-  // State to track the active tab
+
   const [activeTab, setActiveTab] = useState("features");
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
