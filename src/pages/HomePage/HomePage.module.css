@@ -1,10 +1,18 @@
 .container {
+  
   display: flex;
   justify-content: space-between;
   
-  padding: 100px 64px;
+  padding: 40px 64px;
   margin: 0 auto;
-  outline: 2px solid red;
-
+  
   width: 1440px;
+
+}
+
+
+.featureItem h3,
+.featureItem p {
+  color: #ffffff; /* White text color, or adjust as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

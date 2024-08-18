@@ -5,7 +5,6 @@ const FavoritePage = () => {
   
   return (
     <main className={css.container}>
-      <h1>FavoritePage</h1>
       <Favorites/>
     </main>
   );

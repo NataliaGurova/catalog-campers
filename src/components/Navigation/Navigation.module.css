@@ -1,8 +1,13 @@
 .header {
   display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  right: 40px;
+  z-index: 40;
+  background-color: #fff;
  
   padding: 8px 56px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 1440px;
 
   border-bottom: 1px solid black;

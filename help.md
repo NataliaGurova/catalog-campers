@@ -51,3 +51,18 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
+
+<form className={s.filtersForm} onSubmit={handleSubmit(onSubmit)}>
+        <label className={s.locationLabel} htmlFor="">
+          Location
+          <input
+            className={s.locationInput}
+            type="text"
+            {...register('location')}
+            placeholder="City"
+          />
+          <svg className={s.locationIcon}>
+            <use xlinkHref={`${sprite}#icon-map-pin`}></use>
+          </svg>
+        </label>

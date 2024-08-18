@@ -1,6 +1,218 @@
 .container {
   display: flex;
+  width: 360px;
   
   flex-direction: column;
   margin-right: 64px;
+}
+/* 
+.vehicle::after{
+  
+  content: '';
+  width: 360px;
+  height: 2px;
+  background-color: red;
+  color: #d84343;
+} */
+
+.sectionHeading {
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  margin-bottom: 24px; 
+  width: 360px;
+}
+
+.sectionHeading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px; 
+  background-color: rgba(71, 84, 103, 0.2);
+  position: absolute;
+  bottom: -24px; 
+  left: 0;
+}
+
+.iconF {
+  stroke: #101828;
+  fill: transparent;
+  margin-bottom: 8px;
+ 
+}
+.icon {
+  
+  stroke: #101828;
+  fill: #101828;
+  margin-bottom: 8px;  
+}
+
+.iconS {
+  
+  fill: #101828;
+  margin-bottom: 8px;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e44848;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.locationInput {
+  padding: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  width: 100%;
+} */
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.button.active {
+  border: 1px solid #e44848;
+}
+
+.icon {
+  margin-bottom: 8px;
+}
+
+/* Individual Button Padding */
+.acButton {
+  padding: 17px 40px;
+  color: #101828;
+  
+}
+
+.automaticButton {
+  color: #101828;
+  padding: 17px 18px;
+}
+
+.kitchenButton {
+  padding: 17px 27px;
+}
+
+.tvButton {
+  padding: 17px 40px;
+}
+
+.showerButton {
+  padding: 17px 12px;
+}
+
+.camper1Button {
+  padding: 17px 30px;
+}
+
+.camper2Button {
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 128px;
+  text-align: center;
+}
+
+.camper3Button {
+  padding: 17px 30px;
+}
+
+.locationWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.locationLabel {
+  font-size: 16px;
+  color: #333;
+}
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  margin-top: 8px;
+}
+
+.iconMap {
+  position: absolute;
+  left: 18px;
+  stroke: rgba(16, 24, 40, 0.6);
+  fill: transparent;
+}
+
+.locationInput {
+  padding: 18px 290px 18px 48px; /* Adjusted padding to fit icon and maintain space */
+  border-radius: 10px;
+  padding: 18px 18px 18px 44px;
+  text-align: start;
+  width: 360px;
+  height: 56px;
+  background: #f7f7f7;
+  border: none; /* No border */
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.locationInput:focus + .iconMap {
+  stroke: #101828;
+}
+
+.searchButton {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+padding: 16px 40px;
+width: 166px;
+height: 56px;
+
+background: #e44848;
+color: #fff;
+margin-top: 44px;
+}
+
+.searchButton:hover,
+.searchButton:focus {
+  background: #d84343;
 }

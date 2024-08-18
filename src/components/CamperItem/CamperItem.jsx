@@ -12,8 +12,6 @@ import { selectFavorite } from "../../redux/selectors";
 const CamperItem = ({ camper }) => {
   const dispatch = useDispatch();
 
-  // const isFavorite = useSelector((state) =>
-  //   state.adverts.item.find((fav) => fav._id === camper._id))
   const isFavorite = useSelector((state) => selectFavorite(state, camper._id));
   const [showModal, setShowModal] = useState(false);
 
@@ -43,8 +41,8 @@ const CamperItem = ({ camper }) => {
       <div>
         <div className={css.title}>
           <h2 className={css.name}>{camper.name}</h2>
-          <div className={css.price}>
-          <h2>{formatPrice(camper.price)}</h2>
+          <div className={css.priceCont}>
+          <h2 className={css.price}>{formatPrice(camper.price)}</h2>
             <button
               className={`${css.btnHeart} ${isFavorite ? css.favorite : ""}`}
               onClick={toggleFavorite}
@@ -58,12 +56,17 @@ const CamperItem = ({ camper }) => {
         <div>
           <div className={css.rating}>
             <p>
-              <FaStar color="gold" />
-              {camper.rating} ({camper.reviews.length} Reviews)</p>
-            <p className="">
-              <Icon id="map" width="16" height="16" className={css.iconF}/>
+              <FaStar color="gold" className={css.star} />
+              <span className={css.ratingSpan}>
+                {camper.rating} ({camper.reviews.length} Reviews)
+              </span>
+             </p>
+            <div className={css.map}>
+            <p >
+              <Icon id="map" width="16" height="16" className={css.iconMap}/>
               {camper.location}
             </p>
+            </div>
           </div>
         </div>
         <p className={css.description}>{camper.description}</p>
