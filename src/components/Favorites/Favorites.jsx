@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import CamperItem from "../CamperItem/CamperItem";
+import CamperItem from "../CamperItem/CamperItem.jsx";
 
 const Favorites = () => {
   const favorites = useSelector((state) => state.adverts.item);

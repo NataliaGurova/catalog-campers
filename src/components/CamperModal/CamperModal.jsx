@@ -1,11 +1,11 @@
 
 import css from "./CamperModal.module.css"
-import FeaturesReviews from "../FeaturesReviews/FeaturesReviews.jsx";
 import { FaStar } from "react-icons/fa";
 import Icon from "../Icon/Icon";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import ModalWindow from "../ModalWindow/ModalWindow";
+import FeaturesReviews from "../FeaturesReviews/FeaturesReviews";
 
 
 
@@ -29,7 +29,7 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
               <span className={css.ratingSpan}>
                 {camper.rating} ({camper.reviews.length} Reviews)
               </span>
-             </p>
+              </p>
             <div className={css.map}>
             <p >
               <Icon id="map" width="16" height="16" className={css.iconMap}/>

@@ -1,7 +1,7 @@
 
 import { useSelector } from "react-redux";
-import CamperItem from "../CamperItem/CamperItem";
-import { selectAdverts } from "../../redux/selectors";
+import CamperItem from "../CamperItem/CamperItem.jsx";
+import { selectAdverts } from "../../redux/selectors.js";
 import { useState } from "react";
 import css from "./CampersList.module.css"
 

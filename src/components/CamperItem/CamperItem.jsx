@@ -1,10 +1,10 @@
 import { useState } from "react";
-import CamperModal from "../CamperModal/CamperModal";
-import Icon from "../Icon/Icon";
+import CamperModal from "../CamperModal/CamperModal.jsx";
+import Icon from "../Icon/Icon.jsx";
 import { FaStar } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../../redux/advertsSlice";
-import { selectFavorite } from "../../redux/selectors";
+import { addFavorite, removeFavorite } from "../../redux/advertsSlice.js";
+import { selectFavorite } from "../../redux/selectors.js";
 import css from "./CamperItem.module.css";
 
 const CamperItem = ({ camper }) => {
