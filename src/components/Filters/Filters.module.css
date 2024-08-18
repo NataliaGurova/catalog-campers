@@ -5,15 +5,7 @@
   flex-direction: column;
   margin-right: 64px;
 }
-/* 
-.vehicle::after{
-  
-  content: '';
-  width: 360px;
-  height: 2px;
-  background-color: red;
-  color: #d84343;
-} */
+
 
 .sectionHeading {
   font-size: 18px;
@@ -51,22 +43,6 @@
   gap: 20px;
 }
 
-/* 
-.locationWrapper {
-  display: flex;
-  align-items: center;
-  border: 1px solid #e44848;
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
-}
-
-.locationInput {
-  padding: 10px;
-  border: 1px solid rgba(16, 24, 40, 0.2);
-  border-radius: 10px;
-  width: 100%;
-} */
 
 .buttonGroup {
   display: flex;
@@ -105,7 +81,7 @@
   margin-bottom: 8px;
 }
 
-/* Individual Button Padding */
+
 .acButton {
   padding: 17px 40px;
   color: #101828;
@@ -178,7 +154,7 @@
   width: 360px;
   height: 56px;
   background: #f7f7f7;
-  border: none; /* No border */
+  border: none; 
   outline: none;
   font-size: 16px;
   color: #333;

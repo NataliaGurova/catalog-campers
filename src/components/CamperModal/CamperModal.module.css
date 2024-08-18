@@ -18,16 +18,8 @@
   flex-direction: column;
   border-radius: 20px;
   padding-right: 16px;
-  height: 1288px;
+  /* height: 1288px; */
   position: relative;
-}
-
-.btnClose {
-  stroke: black;
-  fill: black;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .name {
@@ -115,5 +107,19 @@
   font-size: 16px;
   line-height: 1.5;
   color: #475467;
+}
+
+
+.btnClose {
+  stroke: black;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+
+.btnClose:hover,
+.btnClose:focus {
+  stroke:  #ffc531;
 }
 

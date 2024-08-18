@@ -10,19 +10,19 @@ const Filters = () => {
   const [selectedType, setSelectedType] = useState('');
   
 
-  // Handle location input change
+  
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
   };
 
-  // Toggle equipment selection (checkbox logic)
+
   const handleEquipmentToggle = (id) => {
     setSelectedEquipment((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
 
-  // Handle camper type selection (radio button logic)
+  
   const handleTypeSelect = (id) => {
     setSelectedType(id);
   };
@@ -48,7 +48,7 @@ const Filters = () => {
 
       <p>Filters</p>
 
-      {/* Vehicle Equipment (Checkbox Buttons) */}
+      {/* Checkbox Buttons */}
       <h3 className={css.sectionHeading}>Vehicle equipment</h3>
       <div className={css.buttonGroup}>
         <label className={`${css.button} ${css.acButton} ${selectedEquipment.includes('AC') ? css.active : ''}`}>
@@ -98,7 +98,7 @@ const Filters = () => {
         </label>
       </div>
 
-      {/* Vehicle Type (Radio Buttons) */}
+      {/* Radio Buttons */}
       <h3 className={css.sectionHeading}>Vehicle type</h3>
       <div className={css.buttonGroup}>
         <label className={`${css.button} ${css.camper1Button} ${selectedType === 'van' ? css.active : ''}`}>
