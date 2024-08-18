@@ -1,4 +1,6 @@
-
+.container {
+  display: flex;
+}
 .iconF {
   stroke: black;
   fill: transparent;
@@ -21,8 +23,6 @@
   flex-wrap: wrap;
   gap: 8px;
   width: 430px;
-  margin-top: 44px;
-
 }
 
 .iconItem {
@@ -32,4 +32,38 @@ align-items: center;
 border-radius: 100px;
 padding: 12px 18px;
 background: #f2f4f7;
+}
+
+
+.tabs {
+  font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 20px;
+
+line-height: 1.2;
+color: #101828;
+ 
+  color: #333;
+  position: relative;
+  margin-bottom: 44px;
+  padding-bottom: 24px;
+  border-bottom: solid 1px #101828; 
+  width: 902px;
+}
+.btnFeature {
+  margin-right: 40px;
+  font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+}
+.btnReviews {
+  font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+}
+
+.tabContent {
+  margin-right: 24px;
 }

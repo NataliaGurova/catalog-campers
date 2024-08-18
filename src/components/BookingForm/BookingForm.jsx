@@ -67,7 +67,7 @@ const BookingForm = () => {
 
   return (
     <div className={css.container}>
-      <h3>Book your campervan now</h3>
+      <h3 className={css.title}>Book your campervan now</h3>
       <p className={css.text}>Stay connected! We are always ready to help you.</p>
       <form onSubmit={handleSubmit} className={css.formContainer}>
         <div className={css.field}>
@@ -127,7 +127,7 @@ const BookingForm = () => {
           />
         </div>
 
-        <button type="submit">Send</button>
+        <button className={css.btnSend} type="submit">Send</button>
       </form>
     </div>
   );

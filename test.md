@@ -134,6 +134,7 @@ json
 
 
         <div className={css.detailsContainer}>
+        <h2 className={css.detailsTitle}>Vehicle details</h2>
       <ul className={css.detailsList}>
         <li className={css.detailsItem}>
           <span className={css.detailTitle}>Form</span>

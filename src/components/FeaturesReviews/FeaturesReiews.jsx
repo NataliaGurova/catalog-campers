@@ -2,18 +2,25 @@
 import { useState } from "react";
 import css from "./FeaturesReviews.module.css"
 import Icon from "../Icon/Icon.jsx";
+import Features from "../Features/Features";
+import BookingForm from "../BookingForm/BookingForm";
+import Reviews from "../Reviews/Reviews";
 
 const FeaturesReviews = ({ camper }) => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState("features");
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   return (
     <div>
       <div className={css.tabs}>
-        <button onClick={() => setActiveTab("features")}>Features</button>
-        <button onClick={() => setActiveTab("reviews")}>Reviews</button>
+        <button className={css.btnFeature} onClick={() => setActiveTab("features")}>Features</button>
+        <button className={css.btnReviews} onClick={() => setActiveTab("reviews")}>Reviews</button>
       </div>
 
+      <div className={css.container}>
       <div className={css.tabContent}>
         {activeTab === "features" && (
           <div>
@@ -27,7 +34,7 @@ const FeaturesReviews = ({ camper }) => {
             {camper.transmission && (
               <li className={css.iconItem}>
                 <Icon id="automatic" width="20" height="20" className={css.iconF}/>
-                {camper.transmission} Automatic
+                {capitalizeFirstLetter(camper.transmission)}
               </li>
             )}
             {camper.details.airConditioner !== 0 && (
@@ -39,13 +46,13 @@ const FeaturesReviews = ({ camper }) => {
             {camper.engine && (
               <li className={css.iconItem}>
                 <Icon id="Petrol" width="20" height="20" className={css.iconS}/>
-                {camper.engine} Petrol
+                {capitalizeFirstLetter(camper.engine)}
               </li>
             )}
             {camper.details.kitchen !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="kitchen" width="20" height="20" className={css.iconF}/>
-                {camper.details.kitchen} kitchen
+                  kitchen
               </li>
             )}
             {camper.details.beds !== 0 && (
@@ -69,7 +76,7 @@ const FeaturesReviews = ({ camper }) => {
             {camper.details.radio !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="radio" width="20" height="20" className={css.iconF}/>
-                {camper.details.radio} radio
+                  Radio
               </li>
             )}
             {camper.details.hob !== 0 && (
@@ -81,19 +88,19 @@ const FeaturesReviews = ({ camper }) => {
             {camper.details.toilet !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="toilet" width="20" height="20" className={css.iconS}/>
-                {camper.details.toilet} Toilet
+                Toilet
               </li>
             )}
             {camper.details.shower !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="shower" width="20" height="20" className={css.iconF}/>
-                {camper.details.shower} Shower
+                  Shower
               </li>
             )}
             {camper.details.freezer !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="freezer" width="20" height="20" className={css.iconF}/>
-                {camper.details.freezer} Freezer
+                Freezer
               </li>
             )}
             {camper.details.gas !== 0 && (
@@ -111,10 +118,11 @@ const FeaturesReviews = ({ camper }) => {
             {camper.details.microwave !== 0 && (
               <li className={css.iconItem}>
                 <Icon id="microwave" width="20" height="20" className={css.iconF}/>
-                {camper.details.microwave} Microwave
+                Microwave
               </li>
             )}
             </ul>
+            <Features camper={camper} />
   
             </div>
         )}
@@ -123,11 +131,13 @@ const FeaturesReviews = ({ camper }) => {
           <ul>
             {camper.reviews.map((review, index) => (
               <li key={index}>
-                <p><strong>{review.author}</strong>: {review.comment}</p>
+                <Reviews review={review} />
               </li>
             ))}
           </ul>
         )}
+        </div>
+      <BookingForm/>
       </div>
     </div>
   );

@@ -7,10 +7,18 @@ width: 448px;
 height: 532px;
 }
 
+.title {
+  font-weight: 600;
+font-size: 20px;
+ 
+line-height: 1.2;
+color: #101828;
+}
 .text {
   margin-bottom: 24px;
   margin-top: 8px;
-  /* color: #666; */
+  font-size: 16px;
+  color:#475467;
 }
 
 .icon {
@@ -47,7 +55,7 @@ height: 532px;
   z-index: 22;
   position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 
   border-radius: 10px;
 padding: 18px 341px 18px 18px;
@@ -59,12 +67,14 @@ margin-bottom: 14px;
 
 .bookingDateInput {
   width: 100%;
+  text-align: start;
   padding-right: 40px; /* Зробіть місце для іконки */
 }
 
 .calendarIcon {
   position: absolute;
-  right: 18px; /* Іконка зміщена на 10px від правого краю поля */
+  right: 18px;
+  top: -1px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -100,7 +110,7 @@ input.name:hover, input.name:focus, input.email:hover, input.email:focus {
 .field input {
   outline: none;
   border-color: transparent;
-
+text-align: start;
 
  border-radius: 10px;
  padding-left: 18px;
@@ -124,12 +134,13 @@ background-color: #f7f7f7;
   border-radius: 10px;
  padding-left: 18px;
  padding-top: 18px;
-  
+ border: none;
+  outline: none;
   width: 400px;
 height: 114px;
   background-color: #f7f7f7;
   outline: none;
-  margin-bottom: 14px;
+
 }
 .field input:focus,
 .bookingDateInput:focus,
@@ -144,6 +155,26 @@ height: 114px;
   width: 350px;
   color: rgba(16, 24, 40, 0.6);
   background-color: #f7f7f7;
+}
+
+.btnSend {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+padding: 16px 60px;
+width: 160px;
+height: 56px;
+
+background: #e44848;
+color: #fff;
+margin-top: 24px;
+}
+
+.btnSend:hover,
+.btnSend:focus {
+  background: #d84343;
 }
 
 

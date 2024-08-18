@@ -23,7 +23,7 @@
   width: 24px;
   height: 24px;
   background-color: inherit;
-  position: absolute;
+  /* position: absolute; */
   top: 40px;
   right: 40px;
   stroke: black;

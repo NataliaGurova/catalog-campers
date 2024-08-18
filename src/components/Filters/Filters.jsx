@@ -137,7 +137,7 @@ const Filters = () => {
         </label>
       </div>
       <div>
-        <button type="submit" className={css.searchButton}>Search</button>
+        <button type="submit" className={css.btnSearch}>Search</button>
       </div>
     </section>
   );

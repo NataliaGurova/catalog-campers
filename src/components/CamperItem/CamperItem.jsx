@@ -118,9 +118,9 @@ const CamperItem = ({ camper }) => {
         >Show more</button>
 
         {showModal && (
-  <ModalWindow onCloseModal={handleCloseModal} modalIsOpen={showModal}>
-    <CamperModal camper={camper} />
-  </ModalWindow>
+
+    <CamperModal camper={camper} onCloseModal={handleCloseModal} modalIsOpen={showModal}/>
+
 )}
       </div>
     </div>

@@ -28,18 +28,16 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
         },
         content: {
           borderRadius: '20px',
-          padding: '40px',
-          paddingRight: '0',
-          overflow: 'hidden',
+          // padding: '40px',
+          // paddingRight: '0',
+          // overflow: 'hidden',
           width: '982px',
           margin: 'auto', // Center the modal
         },
       }}
     >
       <div className={css.modalContainer}>
-        <button type="button" onClick={onCloseModal} className={css.btnClose}>
-          <Icon id="xxx" width="24" height="24" className={css.btnX}/>
-        </button>
+        
         {children}
       </div>
     </Modal>
