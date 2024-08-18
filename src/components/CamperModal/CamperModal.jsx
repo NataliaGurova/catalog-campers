@@ -1,7 +1,6 @@
 
 import css from "./CamperModal.module.css"
-import FeaturesReviews from "../FeaturesReviews/FeaturesReiews";
-import BookingForm from "../BookingForm/BookingForm";
+import FeaturesReviews from "../FeaturesReviews/FeaturesReviews.jsx";
 import { FaStar } from "react-icons/fa";
 import Icon from "../Icon/Icon";
 import PerfectScrollbar from 'react-perfect-scrollbar';
