@@ -1,25 +1,16 @@
 .scrollContainer {
-  /* max-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-}
-
-.scrollContainer::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-.scrollContainer {
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-  /* padding: 0 40px; */
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 
@@ -95,6 +86,10 @@ width: 902px;
   stroke: black;
   fill: transparent;
   margin-right: 4px;
+}
+
+.price {
+  margin-bottom: 24px;
 }
 
 .camperImg {
