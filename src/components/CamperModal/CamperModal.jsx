@@ -1,13 +1,10 @@
-
-import css from "./CamperModal.module.css"
+import css from "./CamperModal.module.css";
 import { FaStar } from "react-icons/fa";
 import Icon from "../Icon/Icon";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import ModalWindow from "../ModalWindow/ModalWindow";
 import FeaturesReviews from "../FeaturesReviews/FeaturesReviews";
-
-
 
 const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
   const formatPrice = (price) => `€${price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, '')}`;
@@ -17,26 +14,26 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
       <PerfectScrollbar className={css.scrollContainer}>
         <section className={css.container}>
           <div>
-          <h2>{camper.name}</h2>
-          <button type="button" onClick={onCloseModal} className={css.btnClose}>
-            <Icon id="xxx" width="32" height="32" className={css.btnX} />
-          </button>
+            <h2>{camper.name}</h2>
+            <button type="button" onClick={onCloseModal} className={css.btnClose}>
+              <Icon id="xxx" width="32" height="32" className={css.btnX} />
+            </button>
           </div>
-          <div>
+          <div className={css.ratingContainer}>
             <div className={css.rating}>
-            <p>
-              <FaStar color="gold" className={css.star} />
-              <span className={css.ratingSpan}>
-                {camper.rating} ({camper.reviews.length} Reviews)
-              </span>
+              <p>
+                <FaStar color="gold" className={css.star} />
+                <span className={css.ratingSpan}>
+                  {camper.rating} ({camper.reviews.length} Reviews)
+                </span>
               </p>
-            <div className={css.map}>
-            <p >
-              <Icon id="map" width="16" height="16" className={css.iconMap}/>
-              {camper.location}
-            </p>
+              <div className={css.map}>
+                <p>
+                  <Icon id="map" width="16" height="16" className={css.iconMap} />
+                  {camper.location}
+                </p>
+              </div>
             </div>
-          </div>
           </div>
           <h2 className={css.price}>{formatPrice(camper.price)}</h2>
           <div className={css.containerImg}>
