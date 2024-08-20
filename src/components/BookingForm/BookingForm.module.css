@@ -90,6 +90,8 @@
   width: 400px;
   height: 114px;
   background-color: #f7f7f7;
+
+  resize:none;
 }
 
 .field input:focus,
