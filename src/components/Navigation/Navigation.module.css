@@ -5,15 +5,17 @@
   margin: 0 auto;
   width: 1440px;
   border-bottom: 1px solid black;
-
+  position: fixed;
   top: 0;
+  z-index: 15;
 }
 
 
 .nav {
+  /* justify-content: flex-start; */
   display: flex;
   gap: 20px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .logo {
