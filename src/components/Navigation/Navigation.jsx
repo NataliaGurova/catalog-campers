@@ -9,7 +9,7 @@ const buildLinkClass = ({ isActive }) => {
 const Navigation = () => {
   return (
     <header className={css.header}>
-      
+      <div className={css.container}>
         <nav className={css.nav}>
           <NavLink to="/" className={buildLinkClass}>
             Home
@@ -21,7 +21,7 @@ const Navigation = () => {
             Favorites Campers
           </NavLink>
         </nav>
-      
+      </div>
     </header>
   );
 };

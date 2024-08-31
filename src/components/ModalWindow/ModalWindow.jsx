@@ -31,6 +31,7 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
           // padding: '40px',
           // paddingRight: '0',
           // overflow: 'hidden',
+          zIndex: '20',
           width: '982px',
           margin: 'auto', // Center the modal
         },
