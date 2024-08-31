@@ -11,14 +11,11 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
 
   return (
     <ModalWindow modalIsOpen={modalIsOpen} onCloseModal={onCloseModal}>
-      <PerfectScrollbar className={css.scrollContainer}>
         <section className={css.container}>
-          <div>
+          
             <h2>{camper.name}</h2>
-            <button type="button" onClick={onCloseModal} className={css.btnClose}>
-              <Icon id="xxx" width="32" height="32" className={css.btnX} />
-            </button>
-          </div>
+            
+          
           <div className={css.ratingContainer}>
             <div className={css.rating}>
               <p>
@@ -35,6 +32,9 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
               </div>
             </div>
           </div>
+
+      <PerfectScrollbar className={css.scrollContainer}>
+      <div className={css.box}>
           <h2 className={css.price}>{formatPrice(camper.price)}</h2>
           <div className={css.containerImg}>
             {camper.gallery.slice(0, 3).map((image, index) => (
@@ -46,9 +46,10 @@ const CamperModal = ({ camper, onCloseModal, modalIsOpen }) => {
           <p className={css.description}>{camper.description}</p>
           <div className={css.addContainer}>
             <FeaturesReviews camper={camper} />
-          </div>
-        </section>
+            </div>
+      </div>
       </PerfectScrollbar>
+        </section>
     </ModalWindow>
   );
 };

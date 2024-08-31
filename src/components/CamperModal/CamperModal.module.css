@@ -18,8 +18,20 @@
   flex-direction: column;
   border-radius: 20px;
   padding-right: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+   /* padding: 40px 0 40px 20px; */
+
+  /* margin-left: 18px;
+  margin-right: 18px; */
   /* height: 1288px; */
   position: relative;
+}
+
+.box {
+  margin-right: 16px;
+  padding-right: 16px;
 }
 
 .name {
@@ -108,7 +120,7 @@
   line-height: 1.5;
   color: #475467;
 }
-
+/* 
 
 .btnClose {
   stroke: black;
@@ -122,4 +134,4 @@
 .btnClose:focus {
   stroke:  #ffc531;
 }
-
+ */

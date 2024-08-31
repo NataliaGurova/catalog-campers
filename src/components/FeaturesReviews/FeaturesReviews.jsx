@@ -7,7 +7,11 @@ import { useState } from "react";
 
 const FeaturesReviews = ({ camper }) => {
   const [activeTab, setActiveTab] = useState("features");
-
+//   if (activeTab === "features") {
+//     document.body.classList.add(css.activeLine);
+//   } else { 
+    
+// }
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -15,8 +19,18 @@ const FeaturesReviews = ({ camper }) => {
   return (
     <div>
       <div className={css.tabs}>
-        <button className={css.btnFeature} onClick={() => setActiveTab("features")}>Features</button>
-        <button className={css.btnReviews} onClick={() => setActiveTab("reviews")}>Reviews</button>
+        <button
+          className={`${css.btnFeature} ${activeTab === "features" ? css.active : ""}`}
+          onClick={() => setActiveTab("features")}
+        >
+          Features
+        </button>
+        <button
+          className={`${css.btnReviews} ${activeTab === "reviews" ? css.active : ""}`}
+          onClick={() => setActiveTab("reviews")}
+        >
+          Reviews
+        </button>
       </div>
 
       <div className={css.container}>

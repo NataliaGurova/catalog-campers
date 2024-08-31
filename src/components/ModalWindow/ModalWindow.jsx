@@ -7,13 +7,21 @@ import Icon from '../Icon/Icon';
 Modal.setAppElement('#root');
 
 const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
-  useEffect(() => {
-    if (modalIsOpen) {
-      document.body.classList.add(css.modalOpen);
-    } else {
+
+   useEffect(() => {
+    document.body.classList.add(css.modalOpen);
+
+    return () => {
       document.body.classList.remove(css.modalOpen);
-    }
-  }, [modalIsOpen]);
+    };
+  }, []);
+  // useEffect(() => {
+  //   if (modalIsOpen) {
+  //     document.body.classList.add(css.modalOpen);
+  //   } else {
+  //     document.body.classList.remove(css.modalOpen);
+  //   }
+  // }, [modalIsOpen]);
 
   return (
     <Modal
@@ -28,7 +36,7 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
         },
         content: {
           borderRadius: '20px',
-          // padding: '40px',
+          padding: '0',
           // paddingRight: '0',
           // overflow: 'hidden',
           zIndex: '20',
@@ -38,7 +46,9 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
       }}
     >
       <div className={css.modalContainer}>
-        
+        <button type="button" onClick={onCloseModal} className={css.btnClose}>
+          <Icon id="xxx" width="32" height="32" className={css.btnX} />
+        </button>
         {children}
       </div>
     </Modal>

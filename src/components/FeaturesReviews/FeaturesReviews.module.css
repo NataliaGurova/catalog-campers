@@ -57,11 +57,26 @@ font-size: 20px;
 line-height: 1.2;
 color: #101828;
 }
+
 .btnReviews {
   font-weight: 600;
 font-size: 20px;
 line-height: 1.2;
 color: #101828;
+}
+.btnFeature.active::after,
+.btnReviews.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  width: 85px;
+  height: 5px;
+  background-color: #e44848;
+}
+
+.btnReviews.active::after {
+  left: 117px;
 }
 
 .tabContent {

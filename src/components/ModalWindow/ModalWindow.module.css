@@ -3,8 +3,10 @@
 }
 
 .modalContainer {
-  margin-top: 20px;
+  /* margin-top: 20px;
   margin-left: 18px;
+  padding-left: 10px;
+  padding-right: 10px; */
 }
 /* 
 .modalWindow {
@@ -28,7 +30,7 @@
   width: 24px;
   height: 24px;
   background-color: inherit;
-  /* position: absolute; */
+  position: absolute;
   top: 40px;
   right: 40px;
   stroke: black;
