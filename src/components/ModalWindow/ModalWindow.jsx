@@ -15,14 +15,7 @@ const ModalWindow = ({ modalIsOpen, onCloseModal, children }) => {
       document.body.classList.remove(css.modalOpen);
     };
   }, []);
-  // useEffect(() => {
-  //   if (modalIsOpen) {
-  //     document.body.classList.add(css.modalOpen);
-  //   } else {
-  //     document.body.classList.remove(css.modalOpen);
-  //   }
-  // }, [modalIsOpen]);
-
+  
   return (
     <Modal
       isOpen={modalIsOpen}
