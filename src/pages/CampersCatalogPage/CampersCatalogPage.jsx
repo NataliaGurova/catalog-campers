@@ -19,12 +19,14 @@ const CampersCatalogPage = () => {
       camper.location.toLowerCase().includes(newLocation.toLowerCase())
     );
     setFilteredCampers(filtered);
+    console.log(filteredCampers);
+    
   };
 
   return (
     <main className={css.container}>
       <Filters onChange={handleLocationChange} location={location} />
-      <CampersList />
+      <CampersList data={filteredCampers} />
     </main>
   );
 }

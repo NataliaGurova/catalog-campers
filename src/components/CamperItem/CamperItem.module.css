@@ -103,6 +103,12 @@
   margin-right: 8px;
 }
 
+.icon {
+  margin-right: 8px;
+  stroke: black;
+  fill: black;  
+}
+
 .iconS {
   margin-right: 8px;
   fill: black;
@@ -112,7 +118,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  width: 430px;
+  width: 526px;
   margin-bottom: 24px;
 }
 
@@ -122,6 +128,11 @@
   border-radius: 100px;
   padding: 12px 18px;
   background: #f2f4f7;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .btnShowMore {
@@ -130,6 +141,7 @@
   justify-content: center;
   border-radius: 200px;
   padding: 16px 40px;
+  margin-top: 24px;
   width: 166px;
   height: 56px;
   background: #e44848;
@@ -144,4 +156,9 @@
 .btnHeart.favorite .iconHeart {
   fill: #d84343;
   stroke: #d84343;
+}
+
+.detailsList {
+  max-height: 96px; /* Приблизно два рядки тексту */
+  overflow: hidden; /* Приховуємо елементи, що виходять за межі */
 }

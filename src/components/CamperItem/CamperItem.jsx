@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../../redux/advertsSlice.js";
 import { selectFavorite } from "../../redux/selectors.js";
 import css from "./CamperItem.module.css";
+import Details from "../Details/Details.jsx";
 
 const CamperItem = ({ camper }) => {
   const dispatch = useDispatch();
@@ -42,6 +43,9 @@ const CamperItem = ({ camper }) => {
           </p>
         </div>
         <p className={css.description}>{camper.description}</p>
+        {/* <div className={css.detailsList}>
+          <Details camper={camper} />
+        </div> */}
         <ul className={css.iconList}>
           {camper.adults !== 0 && (
             <li className={css.iconItem}>

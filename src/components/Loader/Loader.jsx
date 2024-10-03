@@ -11,7 +11,8 @@ const Loader = () => {
         ariaLabel="color-ring-loading"
         wrapperStyle={{}}
         wrapperClass="color-ring-wrapper"
-        colors={['#DCF9DD', '#E8FEE9', '#9BE1A0', '#88CC8D', '#76B87B']}
+        // colors={['#DCF9DD', '#E8FEE9', '#9BE1A0', '#88CC8D', '#76B87B']}
+        colors={['#dcf1f9', '#52bdfa', '#4ba3da', '#79a4f2', '#4439df']}
       />
     </div>
   );

@@ -6,8 +6,8 @@ import { useState } from "react";
 import css from "./CampersList.module.css"
 
 
-const CampersList = () => {
-  const data = useSelector(selectAdverts);
+const CampersList = ({data}) => {
+  // const data = useSelector(selectAdverts);
   const [visibleCount, setVisibleCount] = useState(4);
 
   const handleLoadMore = () => {

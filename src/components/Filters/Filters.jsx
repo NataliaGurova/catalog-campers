@@ -4,17 +4,12 @@ import css from './Filters.module.css';
 import { useState } from 'react';
 
 
-const Filters = () => {
-  const [location, setLocation] = useState('');
+const Filters = ({ onChange, location }) => {
+  
   const [selectedEquipment, setSelectedEquipment] = useState([]);
   const [selectedType, setSelectedType] = useState('');
+  // const [isSelected, setIsSelected] = useState(false);
   
-
-  
-  const handleLocationChange = (e) => {
-    setLocation(e.target.value);
-  };
-
 
   const handleEquipmentToggle = (id) => {
     setSelectedEquipment((prev) =>
@@ -27,6 +22,33 @@ const Filters = () => {
     setSelectedType(id);
   };
 
+
+  // const [values, setValues] = useState({
+  //   login: "",
+  //   password: "",
+  // });
+
+  // const handleLoginChange = (evt) => {
+  //   setValues({
+  //     ...values,
+  //     login: evt.target.value,
+  //   });
+  // };
+
+  // const handlePwdChange = (evt) => {
+  //   setValues({
+  //     ...values,
+  //     password: evt.target.value,
+  //   });
+  // };
+
+  
+  // const handleChange = (evt) => {
+  //   setIsSelected(evt.target.checked);
+  //   console.log(setIsSelected(evt.target.checked));
+    
+  // };
+
   return (
     <section className={css.container}>
       {/* Location Input */}
@@ -38,7 +60,7 @@ const Filters = () => {
       <input
         type="text"
         value={location}
-        onChange={handleLocationChange}
+        onChange={onChange}
         placeholder="City"
         className={css.locationInput}
       />
@@ -54,6 +76,7 @@ const Filters = () => {
         <label className={`${css.button} ${css.acButton} ${selectedEquipment.includes('AC') ? css.active : ''}`}>
           <input
             type="checkbox"
+            value="AC"
             checked={selectedEquipment.includes('AC')}
             onChange={() => handleEquipmentToggle('AC')}
           />
@@ -63,6 +86,7 @@ const Filters = () => {
         <label className={`${css.button} ${css.automaticButton} ${selectedEquipment.includes('automatic') ? css.active : ''}`}>
           <input
             type="checkbox"
+            value="automatic"
             checked={selectedEquipment.includes('automatic')}
             onChange={() => handleEquipmentToggle('automatic')}
           />
@@ -72,6 +96,7 @@ const Filters = () => {
         <label className={`${css.button} ${css.kitchenButton} ${selectedEquipment.includes('kitchen') ? css.active : ''}`}>
           <input
             type="checkbox"
+            value="kitchen"
             checked={selectedEquipment.includes('kitchen')}
             onChange={() => handleEquipmentToggle('kitchen')}
           />
@@ -81,6 +106,7 @@ const Filters = () => {
         <label className={`${css.button} ${css.tvButton} ${selectedEquipment.includes('TV') ? css.active : ''}`}>
           <input
             type="checkbox"
+            value="TV"
             checked={selectedEquipment.includes('TV')}
             onChange={() => handleEquipmentToggle('TV')}
           />
@@ -90,6 +116,7 @@ const Filters = () => {
         <label className={`${css.button} ${css.showerButton} ${selectedEquipment.includes('shower') ? css.active : ''}`}>
           <input
             type="checkbox"
+            value="shower"
             checked={selectedEquipment.includes('shower')}
             onChange={() => handleEquipmentToggle('shower')}
           />
@@ -137,7 +164,11 @@ const Filters = () => {
         </label>
       </div>
       <div>
-        <button type="submit" className={css.btnSearch}>Search</button>
+        <button type="submit"
+          className={css.btnSearch}
+          // disabled={!isSelected}
+        >Search
+        </button>
       </div>
     </section>
   );
